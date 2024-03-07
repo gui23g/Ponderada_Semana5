@@ -25,12 +25,6 @@ Escolha a opção que responde corretamente:
 
 a) Imprime os números pares de 1 a 10.
 
-b) Imprime os números ímpares de 1 a 10.
-
-c) Imprime os números pares de 2 a 10.
-
-d) Imprime os números ímpares de 2 a 10.
-
 ______
 
 **2)** Identificar a linha que falta no código para criar uma classe Veiculo com atributo marca, e uma classe Carro que herda de Veiculo com um método ligar(). 
@@ -41,12 +35,6 @@ No lugar onde está escrito “// linha” qual das opções abaixo deve estar p
 
 A) let carro = new Carro("Toyota");
 
-B) let ligar = new ligar("Toyota");
-
-C) class Moto extends Veiculo {};
-
-D) carro1.ligar();
-
 ______
 
 **3)** Qual é o valor de resultado após a execução deste código?
@@ -56,12 +44,6 @@ ______
 Escolha a opção que responde corretamente:
 
 A) 18
-
-B) 16
-
-C) 14
-
-D) 12
 
 ______
 
