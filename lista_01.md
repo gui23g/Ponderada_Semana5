@@ -23,7 +23,7 @@ print(a)
 
 Escolha a opção que responde corretamente:
 
-a) Imprime os números pares de 1 a 10.
+c) Imprime os números pares de 2 a 10.
 
 ______
 
@@ -51,23 +51,11 @@ ______
 
 A) ![Uma imagem](assets/ex04_1.PNG)
 
-B) ![Uma imagem](assets/ex04_2.PNG)
-
-C) ![Uma imagem](assets/ex04_3.PNG)
-
-D) ![Uma imagem](assets/ex04_4.PNG)
-
 ______
 
 **5)** Qual a forma correta de definir uma classe Carro em JavaScript, com um método ligar() e um atributo marca?
 
 A) ![Uma imagem](assets/ex05_1.PNG)
-
-B) ![Uma imagem](assets/ex05_2.PNG)
-
-C) ![Uma imagem](assets/ex05_3.PNG)
-
-D) ![Uma imagem](assets/ex05_4.PNG)
 
 ______
 
@@ -78,12 +66,6 @@ ______
 Qual será a saída do código acima?
 
 A) "Olá, meu nome é João. Olá, meu nome é Maria."
-
-B) "Olá, meu nome é ."
-
-C) "João Maria"
-
-D) "undefined undefined"
 
 ______
 
@@ -101,6 +83,31 @@ Criando e manipulando Animais:
 - Para cada animal, chame o método descrever() para ver a descrição no console.
 
 Dica: Utilize `console.log()` para exibir as informações!
+
+Resolução:
+
+```
+class Animal{
+    constructor(nome, idade){
+        //atributos
+        this.nome = nome;
+        this.idade = idade;
+    }
+    
+    //metodo
+    descrever(){
+        console.log(`Meu ${this.nome} tem ${this.idade} anos`);
+    }
+}
+
+const cachorro = new Animal("cachorro",7);
+const gato = new Animal("Gato",3);
+
+cachorro.descrever();
+gato.descrever();
+```
+
+![Uma imagem](assets/resolução_questão7.PNG)
 
 ______
 
@@ -127,6 +134,44 @@ Chamando os Métodos:
 
 Dica: Utilize console.log() para exibir as informações!
 
+Resolução:
+
+```
+class Animal{
+    constructor(nome, idade){
+        //atributos da classe Animal
+        this.nome = nome;
+        this.idade = idade;
+    }
+
+        //metodo da classe Animal
+        descrever(){
+            console.log(`Meu ${this.nome} tem ${this.idade} anos`);
+        }
+}
+
+class Gato extends Animal{
+    constructor(nome,idade,cor){
+        //atributo extra da classe Gato
+        super(nome,idade);
+        this.cor = cor;
+    }
+
+    //metodo da classe Gato
+    miar(){
+        console.log("MIAAAAAAAAAAAAAAAAAAU");
+    }
+}
+
+const cachorro = new Animal("Cachorro",2);
+const gato = new Gato("Gato",10,"Preto");
+
+cachorro.descrever();
+gato.descrever();
+gato.miar();
+```
+
+![Uma imagem](assets/resolução_questão8.PNG)
 
 ______
 
@@ -149,6 +194,30 @@ Chamando o Método para Ver o Total:
 
 Dica: Utilize console.log() para exibir as informações!
 
+Resolução:
+
+```
+class SomadorDeNotas{
+    constructor(){
+        this.total = 0;
+    };
+
+    adicionarNota(nota){
+        this.total +=nota;
+    }
+
+    verTotal(){
+        console.log("A soma das notas foi: "+this.total);
+    }
+}
+
+let somador = new SomadorDeNotas();
+somador.adicionarNota(10);
+somador.adicionarNota(8);
+somador.verTotal();
+```
+
+![Uma imagem](assets/resolução_questão9.PNG)
 
 ______
 
@@ -170,3 +239,43 @@ Agora, sua tarefa é escrever um código em JavaScript que crie as classes Funci
 - Para cada objeto, chame o método calcularSalario() e mostre o salário calculado no console.
 
 Certifique-se de explicar cada parte do código utilizando comentários, explicando para que serve cada atributo e método, bem como a lógica por trás do cálculo de salário para o tipo de funcionário Professor.
+
+Resolução:
+
+```
+class Funcionario{
+    constructor(nome,idade,salarioBase){
+        //nome do funcionario
+        this.nome = nome;
+        //idade do funcionario
+        this.idade = idade;
+        //salario por hora
+        this.salarioBase = salarioBase;
+        //salario semanal do professor
+        this.salarioSemanal;
+    }
+}
+
+class Professor extends Funcionario{
+    constructor(nome,idade,salarioBase,horasTrabalhadas){
+        super(nome,idade,salarioBase);
+        //horas de aula do professor naquela semana
+        this.horasTrabalhadas = horasTrabalhadas;
+    }
+
+    //funcao que calcula o salario semanal do funcionario, utiliza o parametro definido pelo tipo de funcionario
+    calcularSalario(){
+        //salario base (Salario/hora) multiplicado pelas horas que o professor trabalho
+        this.salarioSemanal = this.salarioBase*this.horasTrabalhadas;
+        //exibi as informacoes e salario semanal do funcionario
+        console.log(`Salário semanal do funcionário ${this.nome}, de ${this.idade} anos, é: ${this.salarioSemanal}`);
+    }
+}
+
+const claudio = new Professor("Claudio",14,150,50);
+const jeff = new Professor("Jefferson",35,50,80);
+claudio.calcularSalario();
+jeff.calcularSalario();
+```
+
+![Uma imagem](assets/resolução_questão10.PNG)
