@@ -5,12 +5,3 @@ while(numero <=10){
     }
     numero++;
 }
-
-//para provar que o primeiro numero e 1, podemos pedir para exibir os numeros impares
-let numero1 =1;
-while(numero1 <=10){
-    if(numero1 % 2 !=0){
-        console.log(numero1);
-    }
-    numero1++;
-}
