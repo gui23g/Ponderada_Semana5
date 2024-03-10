@@ -107,7 +107,7 @@ cachorro.descrever();
 gato.descrever();
 ```
 
-![Uma imagem](assets/resolução_questão7.PNG)
+![Uma imagem](assets/resolução_questão7.png)
 
 ______
 
@@ -171,7 +171,7 @@ gato.descrever();
 gato.miar();
 ```
 
-![Uma imagem](assets/resolução_questão8.PNG)
+![Uma imagem](assets/resolução_questão8.png)
 
 ______
 
@@ -217,7 +217,7 @@ somador.adicionarNota(8);
 somador.verTotal();
 ```
 
-![Uma imagem](assets/resolução_questão9.PNG)
+![Uma imagem](assets/resolução_questão9.png)
 
 ______
 
@@ -280,4 +280,4 @@ claudio.calcularSalario();
 jeff.calcularSalario();
 ```
 
-![Uma imagem](assets/resolução_questão10.PNG)
+![Uma imagem](assets/resolução_questão10.png)
